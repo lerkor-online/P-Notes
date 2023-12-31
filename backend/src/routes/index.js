@@ -6,6 +6,7 @@ const deleteNoteById = require("../controllers/deleteNoteById");
 const postCategory = require("../controllers/postCategory");
 const getAllCategories = require("../controllers/getAllCategories");
 const editNote = require("../controllers/editNoteById");
+const deleteCategory = require("../controllers/deleteCategory"); 
 
 const { Router } = require("express");
 
@@ -19,6 +20,7 @@ router.delete("/note/:idNote", deleteNoteById);
 router.put("/note", editNote);
 router.post("/category", postCategory);
 router.get("/category", getAllCategories);
+router.delete("/category/:idCategory", deleteCategory);
 
 
 module.exports = router;
